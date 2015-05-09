@@ -1,33 +1,7 @@
-CalculatrorTest.java
-
-public class CalculatorTest {
-
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Test
-	public void testAdd() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testReduction() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testMultiply() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testDivision() {
-		fail("Not yet implemented");
-	}
-
-}
+@Test(timeout=100)  
+    public void testDiv() throws Exception{  
+        Compalbe com = new Compalbe();  
+        int result = com.div(2, 2);  
+        Thread.sleep(20);  
+        Assert.assertEquals(1,result);  
+    }  
