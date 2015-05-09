@@ -1,36 +1,10 @@
-Calculator.java
-
-package com.demo;
-
-public class Calculator {
-	private double x;
-	private double y;
-	public double getX() {
-		return x;
-	}
-	public void setX(double x) {
-		this.x = x;
-	}
-	public double getY() {
-		return y;
-	}
-	public void setY(double y) {
-		this.y = y;
-	}
-
-	public double add(double x , double y) {
-		return x + y;
-	}
-	
-	public double reduction(double x , double y) {
-		return x - y;
-	}
-	
-	public double multiply(double x , double y) {
-		return x * y;
-	}
-	
-	public double division(double x , double y) {
-		return x / y;
-	}
-}
+public class TestCompalbe {  
+    //指定异常  
+         @Test(expected=Exception.class)  
+    public void testDiv() throws Exception{  
+        Compalbe com = new Compalbe();  
+                  int result = com.div(2, 0);  
+        Assert.assertEquals(1,result);  
+    }  
+  
+}  
