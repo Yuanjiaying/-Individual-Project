@@ -1,0 +1,27 @@
+public class TestCompable2 {  
+  
+Compalbe2 com = null;  
+  
+ @Before  
+ public void init() {  
+  com = new Compalbe2();  
+}  
+  
+ @After  
+ public void destory() {  
+  
+}  
+  
+@Test  
+ public void testMul() {  
+int result = com.mul(3, 4);  
+Assert.assertEquals(12, result);  
+}  
+  
+@Test  
+public void testSub() {  
+ int result = com.sub(3, 4);  
+ Assert.assertEquals(-1, result);  
+}  
+  
+}  
