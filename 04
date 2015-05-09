@@ -1,0 +1,28 @@
+public class TestCompalbe {  
+ Compalbe com = null;  
+  
+
+@Before  
+ public void init() {  
+ System.out.println("init");  
+ com = new Compalbe();  
+  }  
+ @After  
+public void destory() {  
+ System.out.println("destorys");  
+ com = null;  
+}  
+  
+@Test  
+ public void testAdd() {  
+ int result = com.add(2, 2);  
+ Assert.assertEquals(4, result);  
+  }  
+  
+  @Test  
+  public void testDiv() throws Exception {  
+ int result = com.div(2, 2);  
+  Assert.assertEquals(1, result);  
+  }  
+  
+}  
