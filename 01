@@ -1,0 +1,40 @@
+# -Individual-Project
+Junit4
+package com.school.indivodial;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class CalcFunctionTest {
+    
+    @Test
+    public void testEvaluate_basic() throws Exception {
+        Double expectedAnswer = Double.valueOf("90");
+        Double actualAnswer = Double.valueOf(CalcFunction.Evaluate("100-(22+6×3)÷4="));
+        assertEquals(expectedAnswer, actualAnswer);
+    }
+
+    @Test
+    public void testEvaluate_pow() throws Exception{
+        Double expectedAnswer = Double.valueOf("1024");
+        Double actualAnswer = Double.valueOf(CalcFunction.Evaluate("2^10="));
+        assertEquals(expectedAnswer, actualAnswer);
+    }
+    
+    @Test
+    public void testEvaluate_sqrt() throws Exception{
+        Double expectedAnswer = Double.valueOf("8");
+        Double actualAnswer = Double.valueOf(CalcFunction.Evaluate("√64="));
+        assertEquals(expectedAnswer, actualAnswer);
+    }
+    
+    @Test
+    public void testEvaluate_cos() throws Exception{
+        Double expectedAnswer = Double.valueOf("1");
+        Double actualAnswer = Double.valueOf(CalcFunction.Evaluate("COS(0)="));
+        assertEquals(expectedAnswer, actualAnswer);
+    }
+}
+
+CalcFunctionTest.java
